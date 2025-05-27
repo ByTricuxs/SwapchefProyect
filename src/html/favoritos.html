@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-[#f8f4e1] flex justify-center items-center min-h-screen">
+  <div class="w-[380px] mx-auto min-h-screen flex flex-col justify-between bg-[#FFF7EC]">
+
+
+    <div class="bg-[#FEBA17] w-full">
+      <h1 class="text-center py-3 text-brown-800 text-2xl" style="font-family: 'Berkshire Swash', cursive;">
+        Swapchef
+      </h1>
+
+
+      <div class="overflow-x-auto px-4 py-2 bg-[#74512D] scrollbar-hide touch-pan-x">
+        <div class="flex space-x-4 text-sm">
+          <button class="text-white px-3 py-1 rounded-full">Postres</button>
+          <button class="text-white px-3 py-1 rounded-full">Desayunos</button>
+          <button class="text-white px-3 py-1 rounded-full">Comidas</button>
+          <button class="text-white px-3 py-1 rounded-full">Reposterías</button>
+          <button class="text-white px-3 py-1 rounded-full">Vegetarianos</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="px-10 mt-3">
+      <div class="flex items-center bg-[#f3e7d5] rounded-full px-3 py-2">
+        <input type="text" placeholder="Buscar..."
+          class="bg-transparent outline-none w-full text-sm placeholder:text-gray-600" />
+        <img src="public/busqueda.png" alt="icono búsqueda" />
+      </div>
+    </div>
+
+
+    <main class="px-4 py-4 space-y-4">
+      <details class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 open:pb-4">
+        <summary class="cursor-pointer list-none">
+          <img src="public/pasta.png" alt="" class="w-full h-48 object-cover" />
+          <div class="p-3">
+            <p class="text-sm text-gray-500 font-semibold">Comidas</p>
+            <p class="text-lg font-medium text-gray-800">Spaghetti en salsa rosa</p>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-sm text-gray-600">Kristen.V</p>
+              <img src="public/corazonR.png" alt="corazón" class="w-5 h-5" />
+            </div>
+          </div>
+        </summary>
+
+        <div class="px-4 text-sm text-gray-700">
+          <h3 class="font-semibold mt-2">Ingredientes:</h3>
+          <ul class="list-disc pl-4 mt-1 space-y-1">
+            <li>Spaghettis al gusto</li>
+            <li>Carne molida al gusto (opcional)</li>
+            <li>1 salsa de tomate (opcional, sabor sofrito o ranchera)</li>
+            <li>1 salsa blanca o crema dulce</li>
+            <li>Albahaca fresca (opcional)</li>
+            <li>Sal, sazón completa, paprika</li>
+            <li>Queso (opcional)</li>
+            <li>Mantequilla</li>
+          </ul>
+
+          <h3 class="font-semibold mt-4">Preparación:</h3>
+          <ol class="list-decimal pl-4 mt-1 space-y-1">
+            <li>Cocinar la carne molida con condimentos y opcionalmente albahaca.</li>
+            <li>Hervir los spaghettis con sal y sazón completa hasta que estén suaves.</li>
+            <li>Colar y mezclar con mantequilla para evitar que se pegue.</li>
+            <li>Mezclar las salsas en una olla con mantequilla hasta lograr la salsa rosa.</li>
+            <li>Agregar la carne a la salsa y luego el queso.</li>
+            <li>Servir los spaghettis con la salsa por encima.</li>
+          </ol>
+        </div>
+      </details>
+
+
+
+    </main>
+
+
+    <footer class="bg-[#4E1F00] px-[50px] py-3 mt-2">
+      <div class="flex justify-between items-center ">
+        <a href="paginaPrincipal.html">
+          <img src="public/hogar.png" alt="hogar" class="w-6 h-6" /> </a>
+        <a href="foro.html">
+          <img src="public/megafono.png" alt="megáfono" class="w-6 h-6" />
+        </a>
+        <a href="favoritos.html">
+          <img src="public/estrellaA.png" alt="favoritos" class="w-6 h-6" />
+        </a>
+
+        <img src="public/imagenPerfil.png" alt="perfil" class="w-6 h-6" />
+      </div>
+    </footer>
+
+  </div>
+
+
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
