@@ -11,7 +11,7 @@ export default function ProfileGuest() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-full px-6 py-10 bg-[#FFF7EC]">
+    <div className="flex flex-col justify-center items-center h-full px-6 py-70 bg-[#FFF7EC]">
       <h1 className="text-2xl font-bold text-[#4E1F00] mb-6 text-center">
         Inicia sesión para acceder a tu perfil
       </h1>

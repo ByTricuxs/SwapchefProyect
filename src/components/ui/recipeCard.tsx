@@ -12,7 +12,7 @@ interface RecipeCardProps {
 
 export default function RecipeCard(props: RecipeCardProps) {
   return (
-    <details className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 open:pb-4">
+    <details className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 open:pb-4 mb-10">
       <summary className="cursor-pointer list-none">
         <img src={props.image} alt={props.name} className="w-full h-48 object-cover" />
         <div className="p-3">

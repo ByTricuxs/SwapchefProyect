@@ -7,7 +7,7 @@ interface ProfileVerifiedProps {
 }
 
 export default function ProfileVerified({ icon }: ProfileVerifiedProps) {
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleUploadClick = () => {
     navigate({ to: "/postRecipe" }); // Cambia '/upload' por la ruta que uses
@@ -17,10 +17,9 @@ const navigate = useNavigate();
     navigate({ to: "/forum" });
   };
 
-
   return (
     <div>
-      
+
       <section className="flex flex-col items-center py-4">
         <div className="relative">
           <img src="imagenPerfil.png" alt="Foto de perfil" className="w-50 h-50 rounded-full border-1 object-cover" />
@@ -30,6 +29,11 @@ const navigate = useNavigate();
         </div>
         <h2 className="text-2xl font-bold mt-2">Kristen.V</h2>
         <p className="text-sm text-gray-600 mb-4">Kristen@gmail.com</p>
+        <Button
+          text="Cambiar contraseña"
+         style="mb-2 mt-1 w-[170px] bg-[#FEBA17] text-[#4E1F00] py-1 rounded-full font-semibold"
+          onClick={() => navigate({ to: "/password" })}
+        />
 
         <div
           onClick={handleForumClick}
@@ -45,32 +49,32 @@ const navigate = useNavigate();
 
         <div className="flex gap-4">
           <div className="bg-white border-2 border-[#FEBA17] rounded-xl w-full">
-            <img src="pasta.png" alt="Spaghetti" className="w-full h-28 object-cover rounded-t-xl" />
+            <img src="../src/components/imgs/Spaghetti.png" alt="Spaghetti" className="w-full h-28 object-cover rounded-t-xl" />
             <div className="px-2 py-2">
               <p className="text-center text-sm font-medium mt-1">Spaghetti</p>
               <div className="flex items-center text-xs mt-1">
-                <img src="corazones.png" alt="Like" className="w-4 h-4 mr-1" /> 75
+                <img src="../src/assets/corazonVacio.svg" alt="Like" className="w-4 h-4 mr-1" /> 75
               </div>
             </div>
           </div>
 
           <div className="bg-white border-2 border-[#FEBA17] rounded-xl w-full">
-            <img src="Pancakes.png" alt="Pancakes" className="w-full h-28 object-cover rounded-t-xl" />
+            <img src="../src/components/imgs/pancakes.png" alt="Pancakes" className="w-full h-28 object-cover rounded-t-xl" />
             <div className="px-2 py-2 mb-4">
               <p className="text-center text-sm font-medium mt-1">Pancakes</p>
               <div className="flex items-center text-xs mt-1">
-                <img src="corazones.png" alt="Like" className="w-4 h-4 mr-1" /> 105
+                <img src="../src/assets/corazonVacio.svg" alt="Like" className="w-4 h-4 mr-1" /> 105
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex justify-end pt-4">
-        <Button
-                  text="+"
-                  style="bg-[#3b1902af] text-white rounded-full w-12 h-12 flex items-center justify-center text-3xl"
-                  onClick={handleUploadClick}
-                />
+          <Button
+            text="+"
+            style="bg-[#3b1902af] text-white rounded-full w-12 h-12 flex items-center justify-center text-3xl"
+            onClick={handleUploadClick}
+          />
         </div>
       </section>
     </div>

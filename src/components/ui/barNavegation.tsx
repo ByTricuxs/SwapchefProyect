@@ -7,7 +7,7 @@ export default function BarNavigation() {
   const currentPath = location.pathname
 
   const [loggedIn] = React.useState<boolean>(false); // Cambiar a true si está logueado
-  const hideFooter = ['/register', '/login', '/password', '/delete'].includes(currentPath)
+  const hideFooter = ['/register', '/login', '/password', '/delete', '/verifyAccount' ,'/filtros'].includes(currentPath)
 
   const handleProfileClick = () => {
     if (loggedIn) {

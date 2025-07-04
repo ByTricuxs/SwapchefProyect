@@ -22,6 +22,7 @@ interface recipeCardProps {
 interface ContainerProps {
   header?: HeaderProps;
   cards?: recipeCardProps[];
+  values?: Array<string>
 }
 
 const categories = [
@@ -42,6 +43,11 @@ export default function Container(props: ContainerProps) {
   const filteredRecipes = props.cards
   .filter((r) => activeCategory === "Todas" || r.category === activeCategory)
   .filter((r) => r.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+  //
+    console.log(props.values);
+    const api_base = 
+  //
 
   return (
     <section>

@@ -5,8 +5,8 @@ import VerifyAccountForm from "../pages/verifyAccount";
 import ProfileGuest from "../ui/profileGuest";
 
 export default function Profile({ icon }: { icon: string }) {
-  const [loggedIn, setLoggedIn] = useState(true);   
-  const [verified, setVerified] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);   
+  const [verified, setVerified] = useState(false);
   const [verifying, setVerifying] = useState(false);
 
   if (!loggedIn) {

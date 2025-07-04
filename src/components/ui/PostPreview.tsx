@@ -1,3 +1,6 @@
+
+
+
 interface CommentProps {
   user: string
   text: string
@@ -25,7 +28,7 @@ export default function PostPreview({ title, summary, content, author, comments 
             <img src="/ruta/imagenPerfil.png" className="w-5 h-5" />
             <p className="text-sm font-semibold text-gray-700">{author}</p>
           </div>
-          <img src="/ruta/comentario.png" className="w-5 h-5" />
+          <img src="comentario.png" className="w-5 h-5" />
         </div>
       </summary>
 
@@ -37,7 +40,7 @@ export default function PostPreview({ title, summary, content, author, comments 
             <img src="/ruta/imagenPerfil.png" className="w-5 h-5" />
             <p className="text-sm font-semibold text-gray-700">{author}</p>
           </div>
-          <img src="/ruta/comentario.png" className="w-5 h-5" />
+          <img src="comentario.png" className="w-5 h-5" />
         </div>
 
         {comments.map((c, i) => (
@@ -49,7 +52,7 @@ export default function PostPreview({ title, summary, content, author, comments 
                 <span className="text-xs text-gray-500">- {c.date}</span>
               </div>
               <img
-                src={c.liked ? "/ruta/corazonR.png" : "/ruta/corazon.png"}
+                src={c.liked ? "..src/assets/corazonR.svg" : "..src/assets/corazonVacio.svg"}
                 className="w-4 h-4"
               />
             </div>

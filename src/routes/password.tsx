@@ -4,10 +4,10 @@ import Password from '../components/pages/changePassword'
 import Header from '../components/ui/Header'
 import Footer from '../components/ui/footer'
 
-import mapacheImg from '../assets/Mapache.svg';
+import pandaImg from '../assets/Panda rojo.svg';
 
 const headerProps = {
-  img: mapacheImg
+  img: pandaImg
 }
 
 export const Route = createFileRoute('/password')({

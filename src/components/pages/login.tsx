@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Button from "../ui/Button";
 import { useNavigate } from "@tanstack/react-router";
 
+import mostrar from "../imgs/Eye.png";
+
 interface LoginFormData {
   email: string;
   password: string;
@@ -12,6 +14,8 @@ export default function LoginForm() {
     email: "",
     password: "",
   });
+
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -28,7 +32,6 @@ export default function LoginForm() {
       return;
     }
 
-    // Validación simple de correo (opcional)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       alert("Correo electrónico no válido.");
@@ -36,49 +39,60 @@ export default function LoginForm() {
     }
 
     console.log("Login:", formData);
-    // Aquí puedes hacer fetch/post al backend
-    navigate({ to: "/profile" }); // Ir al perfil después del login
+    navigate({ to: "/profile" });
   };
 
   return (
-    <div className="w-full md:w-1/2 bg-zinc-800/50 p-8 rounded-2xl backdrop-blur-sm">
-      <h2 className="text-2xl font-semibold text-gray-700 mb-2">Iniciar sesión</h2>
+    <div className="px-8 py-6">
+      <h2 className="text-[30px] font-semibold text-[#7e7e7e] mb-6">
+        Iniciar sesión
+      </h2>
 
-      <div className="space-y-6">
-        <div>
-          <label className="block text-sm text-[#4E1F00] mb-1">Correo electrónico</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className="w-full px-4 py-2 bg-[#F5DCC7] rounded-full outline-none"
-          />
-        </div>
+      <label className="block text-[#4E1F00] text-[16px] font-semibold mb-1">
+        Correo electrónico
+      </label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleInputChange}
+        className="w-full h-[38px] rounded-full bg-[#f0e2d4] px-4 mb-4 outline-none"
+      />
 
-        <div>
-          <label className="block text-sm text-[#4E1F00] mb-1">Contraseña</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            className="w-full px-4 py-2 bg-[#F5DCC7] rounded-full outline-none"
-          />
-        </div>
-
-        <Button
-          text="Iniciar sesión"
-          style="w-full bg-[#FEBA17] text-[#4E1F00] py-2 rounded-full font-semibold mt-2 cursor-pointer"
-          onClick={handleLogin}
+      <label className="block text-[#4E1F00] text-[16px] font-semibold mb-1">
+        Contraseña
+      </label>
+      <div className="relative mb-4">
+        <input
+          type={showPassword ? "text" : "password"}
+          name="password"
+          value={formData.password}
+          onChange={handleInputChange}
+          className="w-full h-[38px] rounded-full bg-[#f0e2d4] px-4 pr-10 outline-none"
+        />
+        <img
+          src={mostrar}
+          alt="icono ojo"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 w-5 h-5 cursor-pointer"
+          onClick={() => setShowPassword((prev) => !prev)}
         />
       </div>
 
-      <p className="text-center text-sm text-gray-700 mt-2">
+      <p className="text-center text-[15px] font-semibold text-[#5C5C5C] mb-6 cursor-pointer">
+        ¿Olvidaste la contraseña?
+      </p>
+
+      <Button
+        text="Iniciar sesión"
+        style="w-full h-[39px] bg-[#febe17] text-[#4e1f00] font-semibold text-[17px] rounded-full"
+        onClick={handleLogin}
+      />
+
+      <p className="text-center text-[15px] font-semibold text-[#5C5C5C] mt-6">
         ¿Aún no tienes una cuenta?{" "}
         <span
           onClick={() => navigate({ to: "/register" })}
-          className="text-[#FEBA17] font-medium cursor-pointer"
+          className="text-[#4e1f00] underline cursor-pointer"
         >
           Registrarse
         </span>

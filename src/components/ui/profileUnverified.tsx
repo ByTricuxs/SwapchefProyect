@@ -29,6 +29,11 @@ export default function ProfileUnverified({ icon }: ProfileUnverifiedProps) {
         <h2 className="text-2xl font-bold mt-2">Kristen.V</h2>
         <p className="text-sm text-gray-600 mb-4">Kristen@gmail.com</p>
 
+<Button
+          text="Cambiar contraseña"
+          style="mb-2 mt-1 w-[170px] bg-[#FEBA17] text-[#4E1F00] py-1 rounded-full font-semibold"
+          onClick={() => navigate({ to: "/password" })}
+        />
         <div
           onClick={handleForumClick}
           className="mt-4 flex flex-col items-center mb-4 cursor-pointer"
